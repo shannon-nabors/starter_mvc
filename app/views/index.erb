@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flags of the World</title>
+  </head>
+  <body>
+    <h1>Flags</h1>
+    <ul>
+      <% @flags.each do |flag| %>
+        <li><a href="/flags/<%= flag.id %>"><h3><%= flag.country %></h3></a></li>
+      <% end %>
+    </ul>
+  </body>
+</html>

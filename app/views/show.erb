@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @flag.country %></title>
+  </head>
+  <body>
+    <h1>Flag of <%= @flag.country %></h1>
+      <h4>Adoption Date</h4>
+        <p><%= @flag.adoption_date %></p>
+      <h4>Proportion</h4>
+        <p><%= @flag.proportion %></p>
+      <h4>Design</h4>
+        <p><%= @flag.design %></p>
+
+      <form action="/flags/<%= @flag.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Delete this flag">
+      </form>
+
+      <h5><a href="/flags/<%= @flag.id %>/edit">Edit this flag</a></h5>
+      <h5><a href="/flags">Back to flag list</a></h5>
+  </body>
+</html>
